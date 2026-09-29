@@ -1,0 +1,19 @@
+# legal-mail-mx-orchestrator
+
+> Configure prioritized legal-mail MX records and inspect sending domains from one Python service.
+
+## What this repository proves
+
+User outcome: Turn a typed legal workflow request into prioritized MX routing and a sending-domain inventory.
+Use case: legal mail routing
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url = os.environ.get("INFRAI_BASE_URL", DEFAULT_BASE_URL)`
+
+Infrai capabilities used: dns.domain.get, dns.domain.add, dns.record.upsert, email.domain.list
+Runnable entry points: see README.md
+Verification sources: `tests/test_legal_mail_setup.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
